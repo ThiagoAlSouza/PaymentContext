@@ -2,12 +2,15 @@
 
 public class Student
 {
+    private IList<Subscription> subscriptions;
+
     public Student(string firstName, string lastName, string document, string email)
     {
         FirstName = firstName;
         LastName = lastName;
         Document = document;
         Email = email;
+        subscriptions = new List<Subscription>();
     }
 
     public string FirstName { get; private set; }
@@ -16,5 +19,17 @@ public class Student
     public string Email { get; private set; }
     public string Address { get; private set; }
 
-    public List<Subscription> Subscriptions { get; set; }
+    public IReadOnlyCollection<Subscription> Subscriptions { get { return subscriptions.ToArray(); } }
+
+    public void AddSubscription(Subscription subscription)
+    {
+        subscription.Active = true;
+
+        foreach (var item in Subscriptions)
+        {
+            item.Active = false;
+        }
+
+        subscriptions.Add(subscription);
+    }
 }

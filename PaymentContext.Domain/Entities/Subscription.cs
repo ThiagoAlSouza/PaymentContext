@@ -2,9 +2,15 @@
 
 public class Subscription
 {
+    #region Private
+
     private IList<Payment> payments;
 
-    public Subscription(DateTime? expireDate)   
+    #endregion
+
+    #region Constructor
+
+    public Subscription(DateTime? expireDate)
     {
         CreateDate = DateTime.Now;
         LastUpdateDate = DateTime.Now;
@@ -13,6 +19,10 @@ public class Subscription
         payments = new List<Payment>();
     }
 
+    #endregion
+
+    #region Properties
+
     public DateTime CreateDate { get; private set; }
     public DateTime LastUpdateDate { get; private set; }
     public DateTime? ExpireDate { get; private set; }
@@ -20,14 +30,20 @@ public class Subscription
 
     public IReadOnlyCollection<Payment> Payments { get { return payments.ToArray(); } }
 
+    #endregion
+
+    #region Methods
+
     public void AddPayment(Payment payment)
     {
         payments.Add(payment);
     }
 
-    public void ActivateOrDeactivate(bool boolean)  
+    public void ActivateOrDeactivate(bool boolean)
     {
         Active = boolean;
         LastUpdateDate = DateTime.Now;
     }
+
+    #endregion
 }

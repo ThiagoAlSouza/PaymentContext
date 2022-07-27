@@ -2,6 +2,8 @@
 
 public class BoletoPayment : Payment
 {
+    #region Constructor
+
     public BoletoPayment(string number,
         DateTime paidDate,
         DateTime expireDate,
@@ -18,6 +20,12 @@ public class BoletoPayment : Payment
         BoletoNumber = boletoNumber;
     }
 
+    #endregion
+
+    #region Properties
+
     public string BarCode { get; private set; }
     public string BoletoNumber { get; private set; }
+
+    #endregion
 }

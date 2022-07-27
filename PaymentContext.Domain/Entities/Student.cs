@@ -2,7 +2,13 @@
 
 public class Student
 {
+    #region Private
+
     private IList<Subscription> subscriptions;
+
+    #endregion
+
+    #region Constructor
 
     public Student(string firstName, string lastName, string document, string email)
     {
@@ -13,6 +19,10 @@ public class Student
         subscriptions = new List<Subscription>();
     }
 
+    #endregion
+
+    #region Properties
+
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string Document { get; private set; }
@@ -20,6 +30,10 @@ public class Student
     public string Address { get; private set; }
 
     public IReadOnlyCollection<Subscription> Subscriptions { get { return subscriptions.ToArray(); } }
+
+    #endregion
+
+    #region Methods
 
     public void AddSubscription(Subscription subscription)
     {
@@ -32,4 +46,6 @@ public class Student
 
         subscriptions.Add(subscription);
     }
+
+    #endregion
 }

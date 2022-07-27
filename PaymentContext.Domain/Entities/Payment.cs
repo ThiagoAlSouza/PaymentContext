@@ -2,6 +2,8 @@
 
 public abstract class Payment
 {
+    #region Constructor
+
     protected Payment(string number, DateTime paidDate, DateTime expireDate, decimal total, decimal totalPaid, string document, string payer, string address)
     {
         Number = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10).ToUpper();
@@ -14,12 +16,18 @@ public abstract class Payment
         Address = address;
     }
 
+    #endregion
+
+    #region Properties
+
     public string Number { get; private set; }
     public DateTime PaidDate { get; private set; }
     public DateTime ExpireDate { get; private set; }
-    public decimal Total { get; private set; }  
+    public decimal Total { get; private set; }
     public decimal TotalPaid { get; private set; }
     public string Document { get; private set; }
     public string Payer { get; private set; }
     public string Address { get; private set; }
+
+    #endregion
 }

@@ -2,6 +2,8 @@
 
 public class PayPalPayment : Payment
 {
+    #region Constructor
+
     public PayPalPayment(string number,
         DateTime paidDate,
         DateTime expireDate,
@@ -16,5 +18,11 @@ public class PayPalPayment : Payment
         TransactionCode = transactionCode;
     }
 
+    #endregion
+
+    #region Properties
+
     public string TransactionCode { get; private set; }
+
+    #endregion
 }

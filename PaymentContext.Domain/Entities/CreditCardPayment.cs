@@ -2,6 +2,8 @@
 
 public class CreditCardPayment : Payment
 {
+    #region Constructor
+
     public CreditCardPayment(string number,
         DateTime paidDate,
         DateTime expireDate,
@@ -20,7 +22,13 @@ public class CreditCardPayment : Payment
         LastTransactionNumber = lastTransactionNumber;
     }
 
+    #endregion
+
+    #region Properties
+
     public string CardHolderName { get; private set; }
     public string CardNumber { get; private set; }
     public string LastTransactionNumber { get; private set; }
+
+    #endregion
 }

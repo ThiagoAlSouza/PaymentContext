@@ -23,11 +23,11 @@ public class Student
 
     public void AddSubscription(Subscription subscription)
     {
-        subscription.Active = true;
+        subscription.ActivateOrDeactivate(true);
 
         foreach (var item in Subscriptions)
         {
-            item.Active = false;
+            item.ActivateOrDeactivate(false);
         }
 
         subscriptions.Add(subscription);

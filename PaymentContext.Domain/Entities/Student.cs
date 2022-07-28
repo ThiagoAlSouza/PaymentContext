@@ -12,11 +12,12 @@ public class Student
 
     #region Constructor
 
-    public Student(Name name, string document, Email email)
+    public Student(Name name, Document document, Email email, Endereco address)
     {
-        Name = name,
+        Name = name;
         Document = document;
         Email = email;
+        Address = address;
         subscriptions = new List<Subscription>();
     }
 
@@ -25,9 +26,9 @@ public class Student
     #region Properties
 
     public Name Name { get; private set; }
-    public string Document { get; private set; }
+    public Document Document { get; private set; }
     public Email Email { get; private set; }    
-    public string Address { get; private set; }
+    public Endereco Address { get; private set; }
 
     public IReadOnlyCollection<Subscription> Subscriptions { get { return subscriptions.ToArray(); } }
 

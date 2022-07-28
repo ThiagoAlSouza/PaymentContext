@@ -1,6 +1,8 @@
-﻿namespace PaymentContext.Domain.ValueObjects;
+﻿using PaymentContext.Shared.ValueObjects;
 
-public class Name
+namespace PaymentContext.Domain.ValueObjects;
+
+public class Name : ValueObject
 {
     #region Constructor
 

@@ -1,6 +1,8 @@
-﻿namespace PaymentContext.Domain.ValueObjects;
+﻿using PaymentContext.Shared.ValueObjects;
 
-public class Email
+namespace PaymentContext.Domain.ValueObjects;
+
+public class Email : ValueObject
 {
     #region Properties
 

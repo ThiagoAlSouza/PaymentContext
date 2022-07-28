@@ -1,8 +1,9 @@
 ﻿using PaymentContext.Domain.Enums;
+using PaymentContext.Shared.ValueObjects;
 
 namespace PaymentContext.Domain.ValueObjects;
 
-public class Document
+public class Document : ValueObject
 {
     #region Constructor
 

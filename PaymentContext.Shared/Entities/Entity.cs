@@ -1,5 +1,7 @@
-﻿namespace PaymentContext.Shared.Entities;
-public abstract class Entity
+﻿using Flunt.Notifications;
+
+namespace PaymentContext.Shared.Entities;
+public abstract class Entity : Notifiable<Notification> 
 {
     #region Constructor
 

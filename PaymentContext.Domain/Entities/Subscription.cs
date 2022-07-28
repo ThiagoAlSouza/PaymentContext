@@ -1,6 +1,8 @@
-﻿namespace PaymentContext.Domain.Entities;
+﻿using PaymentContext.Shared.Entities;
 
-public class Subscription
+namespace PaymentContext.Domain.Entities;
+
+public class Subscription : Entity
 {
     #region Private
 

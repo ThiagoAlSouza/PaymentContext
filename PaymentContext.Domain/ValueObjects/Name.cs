@@ -10,6 +10,9 @@ public class Name : ValueObject
     {
         FirstName = firstName;
         LastName = lastName;
+
+        if (string.IsNullOrEmpty(FirstName))
+            AddNotification("FirstName", "Invalid Name");
     }
 
     #endregion

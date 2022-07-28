@@ -1,8 +1,9 @@
 ﻿using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities;
 
-public class Student
+public class Student : Entity
 {
     #region Private
 
@@ -19,6 +20,8 @@ public class Student
         Email = email;
         Address = address;
         subscriptions = new List<Subscription>();
+
+       //AddNotification(name, document, email);
     }
 
     #endregion

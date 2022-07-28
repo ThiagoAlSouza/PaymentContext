@@ -1,4 +1,6 @@
-﻿namespace PaymentContext.Domain.Entities;
+﻿using PaymentContext.Domain.ValueObjects;
+
+namespace PaymentContext.Domain.Entities;
 
 public class Student
 {
@@ -10,10 +12,9 @@ public class Student
 
     #region Constructor
 
-    public Student(string firstName, string lastName, string document, string email)
+    public Student(Name name, string document, Email email)
     {
-        FirstName = firstName;
-        LastName = lastName;
+        Name = name,
         Document = document;
         Email = email;
         subscriptions = new List<Subscription>();
@@ -23,10 +24,9 @@ public class Student
 
     #region Properties
 
-    public string FirstName { get; private set; }
-    public string LastName { get; private set; }
+    public Name Name { get; private set; }
     public string Document { get; private set; }
-    public string Email { get; private set; }
+    public Email Email { get; private set; }    
     public string Address { get; private set; }
 
     public IReadOnlyCollection<Subscription> Subscriptions { get { return subscriptions.ToArray(); } }

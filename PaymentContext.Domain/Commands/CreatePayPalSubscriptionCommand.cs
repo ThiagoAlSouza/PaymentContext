@@ -1,9 +1,11 @@
-﻿using PaymentContext.Domain.Enums;
-using PaymentContext.Domain.ValueObjects;
+﻿using Flunt.Notifications;
+using Flunt.Validations;
+using PaymentContext.Domain.Enums;
+using PaymentContext.Shared.Commands;
 
 namespace PaymentContext.Domain.Commands;
 
-public class CreatePayPalSubscriptionCommand
+public class CreatePayPalSubscriptionCommand : Notifiable<Notification>, ICommand
 {
     #region Properties
 
@@ -32,6 +34,19 @@ public class CreatePayPalSubscriptionCommand
     public string PayerDocument { get; set; }
     public EDocumentType PayerDocumentType { get; set; }
     public string PayerEmail { get; set; }
+
+    #endregion
+
+    #region Methods
+
+    public void Validate()
+    {
+        AddNotifications(new Contract<Notification>()
+            .Requires()
+            .IsLowerThan(FirstName, 3, "Name.FirstName", "Nome deve conter pelo menos 3 caracteres")
+            .IsGreaterThan(FirstName, 40, "Name.FirstName", "Nome deve conter até 40 caracteres")
+        );
+    }
 
     #endregion
 }

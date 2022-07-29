@@ -24,14 +24,14 @@ public class SubscriptionHandler : Notifiable<Notification>, IHandler<CreateBole
     public ICommandResult Handle(CreateBoletoSubscriptionCommand command)
     {
         command.Validate();
-        if (command.IsValid)
+        if (!command.IsValid)
         {
             AddNotifications(command);
             return new CommandResult(false, "Não foi possível realizar sua assinatura");
         }
 
-        if (_repository.DocumentExist(command.Document))
-            AddNotification("Document", "Este CPF já está em uso");
+        if (!_repository.DocumentExist(command.Document))
+            AddNotification("Document", "Este Documento já está em uso");
 
         if (_repository.EmailExists(command.Email))
             AddNotification("Email", "Este E-mail já está em uso");
@@ -74,6 +74,13 @@ public class SubscriptionHandler : Notifiable<Notification>, IHandler<CreateBole
 
     public ICommandResult Handle(CreatePayPalSubscriptionCommand command)
     {
+        command.Validate();
+        if (!command.IsValid)
+        {
+            AddNotifications(command);
+            return new CommandResult(false, "Não foi possível realizar sua assinatura");
+        }
+
         if (_repository.DocumentExist(command.Document))
             AddNotification("Document", "Este CPF já está em uso");
 

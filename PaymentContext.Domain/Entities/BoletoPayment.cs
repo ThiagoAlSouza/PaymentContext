@@ -6,18 +6,18 @@ public class BoletoPayment : Payment
 {
     #region Constructor
 
-    public BoletoPayment(string number,
+    public BoletoPayment(
+        string barCode,
+        string boletoNumber,
         DateTime paidDate,
         DateTime expireDate,
         decimal total,
         decimal totalPaid,
-        Document document,
         string payer,
+        Document document,
         Address address,
-        string barCode,
-        string boletoNumber,
         Email email)
-        : base(number, paidDate, expireDate, total, totalPaid, document, payer, address, email)
+        : base(paidDate, expireDate, total, totalPaid, document, payer, address, email)
     {
         BarCode = barCode;
         BoletoNumber = boletoNumber;

@@ -6,7 +6,7 @@ public class CreditCardPayment : Payment
 {
     #region Constructor
 
-    public CreditCardPayment(string number,
+    public CreditCardPayment(
         DateTime paidDate,
         DateTime expireDate,
         decimal total,
@@ -18,7 +18,7 @@ public class CreditCardPayment : Payment
         string cardNumber,
         string lastTransactionNumber,
         Email email)
-        : base(number, paidDate, expireDate, total, totalPaid, document, payer, address, email)
+        : base(paidDate, expireDate, total, totalPaid, document, payer, address, email)
     {
         CardHolderName = cardHolderName;
         CardNumber = cardNumber;

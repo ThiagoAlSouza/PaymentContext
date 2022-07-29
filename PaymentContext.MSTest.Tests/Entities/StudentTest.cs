@@ -28,7 +28,7 @@ public class StudentTest
         _email = new Email("thiagoalsouza98@outlook.com.br");
         _endereco = new Address("Rua do joaozin", "90", "vizinhaça", "Nova Iguaçu", "Rio de Janeiro", "Brasil", "8271673");
         _student = new Student(_name, _document, _email, _endereco);
-        _payment = new PayPalPayment("1278312", DateTime.Now, DateTime.MaxValue, 60, 60, _document, "Thiago", _endereco, "JHASF0128NADS92", _email);
+        _payment = new PayPalPayment(DateTime.Now, DateTime.MaxValue, 60, 60, _document, "Thiago", _endereco, "JHASF0128NADS92", _email);
         _subscription = new Subscription(null);
 
         _subscription.AddPayment(_payment);

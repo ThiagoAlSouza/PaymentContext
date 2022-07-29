@@ -6,7 +6,7 @@ public class PayPalPayment : Payment
 {
     #region Constructor
 
-    public PayPalPayment(string number,
+    public PayPalPayment(
         DateTime paidDate,
         DateTime expireDate,
         decimal total,
@@ -16,7 +16,7 @@ public class PayPalPayment : Payment
         Address address,
         string transactionCode,
         Email email)
-        : base(number, paidDate, expireDate, total, totalPaid, document, payer, address, email)
+        : base(paidDate, expireDate, total, totalPaid, document, payer, address, email)
     {
         TransactionCode = transactionCode;
     }

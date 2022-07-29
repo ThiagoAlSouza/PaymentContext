@@ -2,5 +2,9 @@
 
 public interface ICommand
 {
+    #region Assignatures
+
     void Validate();
+
+    #endregion
 }

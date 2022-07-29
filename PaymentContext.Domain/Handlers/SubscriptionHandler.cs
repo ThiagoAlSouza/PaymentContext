@@ -12,14 +12,24 @@ namespace PaymentContext.Domain.Handlers;
 
 public class SubscriptionHandler : Notifiable<Notification>, IHandler<CreateBoletoSubscriptionCommand>, IHandler<CreatePayPalSubscriptionCommand>
 {
+    #region Private
+
     private readonly IStudentRepository _repository;
     private readonly IEmailService _emailService;
+
+    #endregion
+
+    #region Constructor
 
     public SubscriptionHandler(IStudentRepository repository, IEmailService emailService)
     {
         _repository = repository;
         _emailService = emailService;
     }
+
+    #endregion
+
+    #region Methods
 
     public ICommandResult Handle(CreateBoletoSubscriptionCommand command)
     {
@@ -120,4 +130,6 @@ public class SubscriptionHandler : Notifiable<Notification>, IHandler<CreateBole
 
         return new CommandResult(true, "Assinatura realizada com sucesso");
     }
+
+    #endregion
 }

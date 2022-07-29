@@ -8,7 +8,13 @@ namespace PaymentContext.MSTest.Tests.Queries;
 [TestClass]
 public class StudentQueriesTests
 {
+    #region Private
+
     private IList<Student> _students;
+
+    #endregion
+
+    #region Contructor
 
     public StudentQueriesTests()
     {
@@ -23,6 +29,10 @@ public class StudentQueriesTests
             ));
         }
     }
+
+    #endregion
+
+    #region Methods
 
     [TestMethod]
     public void ShouldReturnNullWhenDocumentNotExists()
@@ -41,4 +51,6 @@ public class StudentQueriesTests
 
         Assert.AreNotEqual(null, studn);
     }
+
+    #endregion
 }

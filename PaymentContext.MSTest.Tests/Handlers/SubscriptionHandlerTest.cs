@@ -8,6 +8,8 @@ namespace PaymentContext.MSTest.Tests.Handlers;
 [TestClass]
 public class SubscriptionHandlerTest
 {
+    #region Methods
+
     [TestMethod]
     public void ShouldReturnErrorWhenDocumentExists()
     {
@@ -39,4 +41,6 @@ public class SubscriptionHandlerTest
         handler.Handle(command);
         Assert.AreEqual(false, handler.IsValid);
     }
+
+    #endregion
 }

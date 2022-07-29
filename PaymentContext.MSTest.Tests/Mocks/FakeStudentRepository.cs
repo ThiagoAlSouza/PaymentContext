@@ -5,17 +5,19 @@ namespace PaymentContext.MSTest.Tests.Mocks;
 
 public class FakeStudentRepository : IStudentRepository
 {
+    #region Methods
+
     public bool DocumentExist(string document)
     {
         if (document.Equals("123"))
             return true;
-        
+
         return false;
     }
 
     public bool EmailExists(string email)
     {
-        if(email.Equals("thiagoalsouza98@outlook.com.br"))
+        if (email.Equals("thiagoalsouza98@outlook.com.br"))
             return true;
 
         return false;
@@ -23,6 +25,8 @@ public class FakeStudentRepository : IStudentRepository
 
     public void CreateSubscription(Student student)
     {
-        
+
     }
+
+    #endregion
 }

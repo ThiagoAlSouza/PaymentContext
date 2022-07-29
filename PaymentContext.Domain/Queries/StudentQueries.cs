@@ -2,10 +2,15 @@
 using PaymentContext.Domain.Entities;
 
 namespace PaymentContext.Domain.Queries;
+
 public class StudentQueries
 {
+    #region Methods
+
     public static Expression<Func<Student, bool>> GetStudentInfo(string document)
     {
         return x => x.Document.Number == document;
     }
+
+    #endregion
 }

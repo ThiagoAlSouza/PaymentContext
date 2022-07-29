@@ -15,4 +15,15 @@ public class CreateBoletoSubscriptionCommandTest
 
         Assert.IsTrue(!command.IsValid);
     }
+
+    [TestMethod]
+    public void ShouldReturnSucessWhenNameIsValid()
+    {
+        var command = new CreateBoletoSubscriptionCommand();
+        command.FirstName = "Thiago";
+
+        command.Validate();
+
+        Assert.IsTrue(command.IsValid);
+    }
 }

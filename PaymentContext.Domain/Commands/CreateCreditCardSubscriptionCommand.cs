@@ -46,8 +46,8 @@ public class CreateBoletoSubscriptionCommand : Notifiable<Notification>, IComman
     {
         AddNotifications(new Contract<Notification>()
             .Requires()
-            .IsLowerThan(FirstName, 3, "Name.FirstName", "Nome deve conter pelo menos 3 caracteres")
-            .IsGreaterThan(FirstName, 40, "Name.FirstName", "Nome deve conter até 40 caracteres")
+            .IsGreaterOrEqualsThan(FirstName, 3, "FirstName", "Nome deve conter pelo menos 3 caracteres")
+            .IsLowerOrEqualsThan(FirstName, 40, "FirstName", "Nome deve conter até 40 caracteres")
         );
     }
 

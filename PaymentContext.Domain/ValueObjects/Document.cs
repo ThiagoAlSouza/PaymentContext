@@ -43,5 +43,4 @@ public class Document : ValueObject
     }
 
     #endregion
-
 }

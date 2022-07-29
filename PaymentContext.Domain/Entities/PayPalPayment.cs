@@ -13,7 +13,7 @@ public class PayPalPayment : Payment
         decimal totalPaid,
         Document document,
         string payer,
-        Endereco address,
+        Address address,
         string transactionCode,
         Email email)
         : base(number, paidDate, expireDate, total, totalPaid, document, payer, address, email)

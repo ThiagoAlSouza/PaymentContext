@@ -13,7 +13,7 @@ public class CreditCardPayment : Payment
         decimal totalPaid,
         Document document,
         string payer,
-        Endereco address,
+        Address address,
         string cardHolderName,
         string cardNumber,
         string lastTransactionNumber,

@@ -2,12 +2,12 @@
 
 namespace PaymentContext.Domain.ValueObjects;
 
-public class Endereco : ValueObject
+public class Address : ValueObject
 {
 
     #region Contructor
 
-    public Endereco(string street, string number, string neighborhood, string city, string state, string country, string zipCode)
+    public Address(string street, string number, string neighborhood, string city, string state, string country, string zipCode)
     {
         Street = street;
         Number = number;

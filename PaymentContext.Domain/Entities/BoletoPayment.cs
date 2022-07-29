@@ -13,7 +13,7 @@ public class BoletoPayment : Payment
         decimal totalPaid,
         Document document,
         string payer,
-        Endereco address,
+        Address address,
         string barCode,
         string boletoNumber,
         Email email)

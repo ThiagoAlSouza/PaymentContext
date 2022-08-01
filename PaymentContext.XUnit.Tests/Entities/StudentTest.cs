@@ -6,7 +6,6 @@ namespace PaymentContext.XUnit.Tests.Entities;
 
 public class StudentTest
 {
-
     #region Private
 
     private readonly Name _name;

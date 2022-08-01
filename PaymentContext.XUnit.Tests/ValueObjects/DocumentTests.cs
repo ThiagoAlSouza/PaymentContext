@@ -1,40 +1,35 @@
 ﻿using PaymentContext.Domain.Enums;
 using PaymentContext.Domain.ValueObjects;
 
-namespace PaymentContext.MSTest.Tests.ValueObjects;
+namespace PaymentContext.XUnit.Tests.ValueObjects;
 
-[TestClass]
 public class DocumentTests
 {
-    #region Methods
-
-    [TestMethod]
+    [Fact]
     public void ShouldReturnErrorWhenCNPJIsInvalid()
     {
         var doc = new Document("124562", EDocumentType.CNPJ);
-        Assert.IsTrue(!doc.Validate());
+        Assert.True(!doc.IsValid);
     }
 
-    [TestMethod]
+    [Fact]
     public void ShouldReturnSucessWhenCNPJIsValid()
     {
         var doc = new Document("12345678910234", EDocumentType.CNPJ);
-        Assert.IsTrue(doc.Validate());
+        Assert.True(doc.IsValid);
     }
 
-    [TestMethod]
+    [Fact]
     public void ShouldReturnErrorWhenCPFIsInvalid()
     {
         var doc = new Document("124562", EDocumentType.CPF);
-        Assert.IsTrue(!doc.Validate());
+        Assert.True(!doc.IsValid);
     }
 
-    [TestMethod]
+    [Fact]
     public void ShouldReturnSucessWhenCPFIsInvalid()
     {
         var doc = new Document("83345234134", EDocumentType.CPF);
-        Assert.IsTrue(doc.Validate());
+        Assert.True(doc.IsValid);
     }
-
-    #endregion
 }

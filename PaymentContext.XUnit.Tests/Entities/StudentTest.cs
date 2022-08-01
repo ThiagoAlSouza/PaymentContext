@@ -47,5 +47,25 @@ public class StudentTest
         Assert.True(!_student.IsValid);
     }
 
+    [Fact]
+    public void ShouldReturnErrorWhenSubscriptionHasNoPayment()
+    {
+        var subscription = new Subscription(null);
+        _student.AddSubscription(subscription);
+
+        Assert.True(!_student.IsValid);
+    }
+
+    [Fact]
+    public void ShouldReturnSuccessWhenAddSubscription()
+    {
+        var subscription = new Subscription(null);
+
+        subscription.AddPayment(_payment);
+        _student.AddSubscription(subscription);
+
+        Assert.True(_student.IsValid);
+    }
+
     #endregion
 }

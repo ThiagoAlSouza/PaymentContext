@@ -40,7 +40,7 @@ public class SubscriptionHandler : Notifiable<Notification>, IHandler<CreateBole
             return new CommandResult(false, "Não foi possível realizar sua assinatura");
         }
 
-        if (!_repository.DocumentExist(command.Document))
+        if (_repository.DocumentExist(command.Document))
             AddNotification("Document", "Este Documento já está em uso");
 
         if (_repository.EmailExists(command.Email))

@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentContext.Domain", "Pa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentContext.Shared", "PaymentContext.Shared\PaymentContext.Shared.csproj", "{43632A86-3DEA-4D09-ADFA-9040F37F3A4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentContext.Xunit.Tests", "PaymentContext.Tests\PaymentContext.Xunit.Tests.csproj", "{A2551FB1-AB99-488D-9DF9-B3A608C8EE84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentContext.MSTest.Tests", "PaymentContext.MSTest.Tests\PaymentContext.MSTest.Tests.csproj", "{D80043D6-238B-4FBD-BC22-09658F8096DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.MSTest.Tests", "PaymentContext.MSTest.Tests\PaymentContext.MSTest.Tests.csproj", "{D80043D6-238B-4FBD-BC22-09658F8096DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentContext.XUnit.Tests", "PaymentContext.XUnit.Tests\PaymentContext.XUnit.Tests.csproj", "{D5484155-E8F4-4983-952F-83E9B579020C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{43632A86-3DEA-4D09-ADFA-9040F37F3A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43632A86-3DEA-4D09-ADFA-9040F37F3A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43632A86-3DEA-4D09-ADFA-9040F37F3A4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A2551FB1-AB99-488D-9DF9-B3A608C8EE84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A2551FB1-AB99-488D-9DF9-B3A608C8EE84}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A2551FB1-AB99-488D-9DF9-B3A608C8EE84}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A2551FB1-AB99-488D-9DF9-B3A608C8EE84}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D80043D6-238B-4FBD-BC22-09658F8096DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D80043D6-238B-4FBD-BC22-09658F8096DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D80043D6-238B-4FBD-BC22-09658F8096DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D80043D6-238B-4FBD-BC22-09658F8096DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5484155-E8F4-4983-952F-83E9B579020C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5484155-E8F4-4983-952F-83E9B579020C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5484155-E8F4-4983-952F-83E9B579020C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5484155-E8F4-4983-952F-83E9B579020C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
